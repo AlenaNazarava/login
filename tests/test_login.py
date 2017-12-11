@@ -17,6 +17,15 @@ class LoginTest(BaseTestCase, unittest.TestCase):
         Homepage_obj.login()
         Homepage_obj.successful_login()
 
+    def test_login_error(self):
+
+        driver = self.driver
+        driver.get(self.getDomain())
+        Homepage_obj = Homepage(self.driver)
+        Homepage_obj.user_is_on_homepage()
+        Homepage_obj.login_invalid_email()
+        Homepage_obj.error_login()
+
 
 suite = unittest.TestLoader().loadTestsFromTestCase(LoginTest)
 unittest.TextTestRunner(verbosity=2).run(suite)
