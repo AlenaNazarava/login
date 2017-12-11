@@ -7,7 +7,7 @@ import unittest
 
 class LoginTest(BaseTestCase, unittest.TestCase):
 
-    def non_test_login(self):
+    def test_login(self):
 
         driver = self.driver
         driver.get(self.getDomain())
@@ -16,7 +16,7 @@ class LoginTest(BaseTestCase, unittest.TestCase):
         Homepage_obj.login()
         Homepage_obj.successful_login()
 
-    def non_test_login_error(self):
+    def test_login_error(self):
 
         driver = self.driver
         driver.get(self.getDomain())
