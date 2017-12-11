@@ -108,13 +108,5 @@ class BasePage(object):
         requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
         current_url = self.driver.current_url
         r = requests.get(current_url, verify=False)
-        print r.status_code
         assert (r.status_code == 200)
-
-    def check_error_page_load(self):
-        requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-        current_url = self.driver.current_url
-        r = requests.get(current_url, verify=False)
-        assert (r.status_code == 503)
-
 
