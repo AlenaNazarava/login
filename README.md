@@ -1,5 +1,5 @@
 # Login
-test login   (python)
+test login   (python 2.7)
 
 Installation:
 
