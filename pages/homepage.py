@@ -48,9 +48,9 @@ class Homepage(BasePage):
         self.find_element("xpath", HomePageMap['loginPasswordXPATH']).send_keys(HomePageMap['passwordTEXT'])
         self.click(10, "css", HomePageMap['submitButtonCSS'])
 
-    def error_login(self):
+        def error_login(self):
 
-        self.check_error_page_load()
+        self.check_successful_page_load()
         self.wait_for_element_visibility(10, "xpath", HomePageMap['invalidEmailPasswordXPATH'])
 
     def login_empty_fields(self):
@@ -63,7 +63,7 @@ class Homepage(BasePage):
         self.find_element("xpath", HomePageMap['loginEmailXPATH']).clear()
         self.find_element("xpath", HomePageMap['loginPasswordXPATH']).clear()
         self.click(10, "css", HomePageMap['submitButtonCSS'])
-        self.check_error_page_load()
+        self.check_successful_page_load()
         # different error messages?
         self.wait_for_element_visibility(10, "xpath", HomePageMap['emptyEmailPasswordXPATH'])
 
