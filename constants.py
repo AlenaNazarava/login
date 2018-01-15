@@ -1,4 +1,4 @@
-hh_constants = dict(Browser = "firefox", Base_URL = "https://cubits.com/")
+hh_constants = dict(Browser = "firefox", Base_URL = "https://xxxx/")
 
 class LocatorMode:
 
