@@ -17,7 +17,6 @@ import requests.packages.urllib3
 requests.packages.urllib3.disable_warnings()
 
 class BasePage(object):
-
     def __init__(self, driver):
         self.driver = driver
 
@@ -25,7 +24,6 @@ class BasePage(object):
         self.driver.refresh()
 
     def is_element_present(self, waitTime, locatorMode, Locator):
-
         element = None
         try:
             if locatorMode == LocatorMode.ID:
