@@ -4,7 +4,6 @@ import os
 
 
 class BaseTestCase(object):
-
     def getDomain(self):
         try:
             testDomain = os.environ['TEST_SUBJECT_DOMAIN']
