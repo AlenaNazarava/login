@@ -6,7 +6,6 @@ import unittest
 
 
 class LoginTest(BaseTestCase, unittest.TestCase):
-
     def test_login(self):
         driver = self.driver
         driver.get(self.getDomain())
