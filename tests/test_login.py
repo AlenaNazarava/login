@@ -8,7 +8,6 @@ import unittest
 class LoginTest(BaseTestCase, unittest.TestCase):
 
     def test_login(self):
-
         driver = self.driver
         driver.get(self.getDomain())
         Homepage_obj = Homepage(self.driver)
@@ -17,7 +16,6 @@ class LoginTest(BaseTestCase, unittest.TestCase):
         Homepage_obj.successful_login()
 
     def test_login_error(self):
-
         driver = self.driver
         driver.get(self.getDomain())
         Homepage_obj = Homepage(self.driver)
@@ -26,7 +24,6 @@ class LoginTest(BaseTestCase, unittest.TestCase):
         Homepage_obj.error_login()
 
     def test_login_empty_fields(self):
-
         driver = self.driver
         driver.get(self.getDomain())
         Homepage_obj = Homepage(self.driver)
